@@ -1,10 +1,14 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    /*background-color: rgba(0,0,0,0.1);*/
-  }
+  box-sizing: border-box;
+  margin: 0;
+  /*background-color: rgba(0,0,0,0.1);*/
+}
 
-  .container {
-    margin: 0 auto;
-    text-align: center;
-  }
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.paragraphs {
+  
+}
