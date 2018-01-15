@@ -1,5 +1,4 @@
 const lines = [
-  // Laguna Beach
   'I never did learn anything, I never went to school, I never did anything, I just went shopping and hung out.',
   'Did you ever see that Seinfeld episode where that bald guy’s fiance licked all of the envelopes and she like died from glue poisoning?',
   'This is where it all happened. Laguna Beach, California. A small town in the OC where I grew up. I just finished my senior year of high school, a year I’ll never forget.',
@@ -42,7 +41,7 @@ const lines = [
   'I’m not staying here. I’m not gonna stay in Laguna Beach, you know?',
   'This is gonna be an adventure for me. Do you think Stephen could be in a jealous rage again?',
   'Last night with Stephen was really, really weird.',
-  ' I wanna leave so bad. I’m not trying to bring anything up, but there’s so many things I wish I could take back and just like not have happened.',
+  'MI wanna leave so bad. I’m not trying to bring anything up, but there’s so many things I wish I could take back and just like not have happened.',
   'My car is dunzo!',
   'Art School, Fashion School whatever.',
   'There\'s no way I\'m going to hook up with LC!',
@@ -58,7 +57,7 @@ const lines = [
   'To the end of one chapter of our lives and the beginning of another.',
   'This is a really sad face because I\'m leaving you.',
   'This is a slash between Gucci and Coach.',
-  'We\'re just together with an \"open relationship\".',
+  'We\'re just together with an "open relationship".',
   'This is going to be my last sunset in Laguna for a while.',
   'Alex, make me stop lusting Jason!',
   'If you\'re aware of the fact that you\'re, like, obsessed with him, then why don\'t you, like, stop it?',
@@ -83,31 +82,40 @@ function randomLine() {
   return lines[Math.floor(Math.random() * lines.length)];
 }
 
-// Make a paragraph of single quotes
+// Make a paragraph of single lines
 function randomPara() {
-  // return 3-6 random quotes
-  let num = Math.floor(Math.random() * (6 - 3 + 1) + 3);
+  // return 6-10 random lines
+  let num = Math.floor(Math.random() * (10 - 6 + 1) + 6);
   let lines = '';
 
-  for (i = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     lines += (randomLine() + ' ');
   }
   return lines;
 }
 
+// Clearing text between requests
+function resetText() {
+  display.textContent = ""
+  displayTwo.textContent = ""
+  displayThree.textContent = ""
+}
+
 // User requests number of paragraphs
 // Change this so it's not hard-coded
 function displayIpsumOne() {
-  display.textContent = ''
+  resetText();
   display.textContent = randomPara();
 }
 
 function displayIpsumTwo() {
+  resetText();
   display.textContent = randomPara();
   displayTwo.textContent = randomPara();
 }
 
 function displayIpsumThree() {
+  resetText();
   display.textContent = randomPara();
   displayTwo.textContent = randomPara();
   displayThree.textContent = randomPara();
