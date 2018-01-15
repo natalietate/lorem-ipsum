@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 const lines = [
   // Laguna Beach
   'I never did learn anything, I never went to school, I never did anything, I just went shopping and hung out.',
@@ -113,3 +112,4 @@ function displayIpsumThree() {
   displayTwo.textContent = randomPara();
   displayThree.textContent = randomPara();
 }
+
